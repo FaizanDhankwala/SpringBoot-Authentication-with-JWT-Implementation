@@ -48,7 +48,7 @@ Before you begin, ensure you have the following installed on your local machine:
    ```sql
    CREATE DATABASE jwt_security;
 
-## make sure your applcaiton.yml is updated
+## Make sure your applcaiton.yml is updated
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/jwt_security
@@ -60,7 +60,7 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
 
-## make sure your pom.xml looks like this
+## Make sure your pom.xml looks like this
 
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -81,7 +81,7 @@ spring:
 </dependency>
 
 
-## clone repo
+## Clone repo
 git clone https://github.com/FaizanDhankwala/SpringBoot-Authentication-with-JWT-Implementation.git
 
 ## Navigate to the Project Directory
