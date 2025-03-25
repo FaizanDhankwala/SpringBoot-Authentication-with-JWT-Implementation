@@ -48,12 +48,51 @@ Before you begin, ensure you have the following installed on your local machine:
    ```sql
    CREATE DATABASE jwt_security;
 
-# if you want to run it, make sure to download and install posgress and add a new database called "jwt_security", from there make sure to add this code in your appliction.yml file
-spring.datasource.url=jdbc:postgresql://localhost:5432/jwt_security
-spring.datasource.username=your_postgres_username
-spring.datasource.password=your_postgres_password
-spring.jpa.hibernate.ddl-auto=update
-spring.datasource.driver-class-name=org.postgresql.Driver
+## make sure your applcaiton.yml is updated
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jwt_security
+    username: your_postgres_username
+    password: your_postgres_password
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driver-class-name: org.postgresql.Driver
 
-# finally clone, this repo
-https://github.com/FaizanDhankwala/SpringBoot-Authentication-with-JWT-Implementation/edit/main/README.md
+## make sure your pom.xml looks like this
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt</artifactId>
+    <version>0.11.5</version>
+</dependency>
+<dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+</dependency>
+
+
+## clone repo
+git clone https://github.com/FaizanDhankwala/SpringBoot-Authentication-with-JWT-Implementation.git
+
+## Navigate to the Project Directory
+cd SpringBoot-Authentication-with-JWT-Implementation
+(all in cmd)
+
+## Build the Project
+Use Maven to build the project:
+mvn clean install
+
+## Run the Project
+After building the project, you can run it using:
+mvn spring-boot:run
+
