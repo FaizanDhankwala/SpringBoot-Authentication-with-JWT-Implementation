@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jwt_security
+    username: faizandhankwala
+    password: donPancho13h$
+    driver-class-name: org.postgresql.Driver  # Corrected typo here from 'drive-class-name'
+  jpa:
+    hibernate:
+      ddl-auto: create-drop  # Corrected this
+    show-sql: true  # Indented correctly
+    properties:
+      hibernate:
+        format_sql: true  # Indented correctly
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
